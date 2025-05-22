@@ -1,11 +1,9 @@
-// set pin numbers
 const int touchPin = 13; 
 const int ledPin = 2;
 
-// valor limite con el que cambia de estado
-const int limite = 40;
-// almacena el valor del pin Touch 
-int valorTouch;
+const int limite = 40; // valor limite con el que cambia de estado
+int valorTouch;        // almacena el valor del pin Touch 
+
 
 void setup(){
   Serial.begin(115200);
@@ -15,18 +13,15 @@ void setup(){
 }
 
 void loop(){
-  // lee el valor del pin touch
   valorTouch = touchRead(touchPin);
   Serial.print(valorTouch);
   
   if(valorTouch < limite){
-    // enciende el LED
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin, HIGH);  // enciende el LED
     Serial.println(" - LED encendido");
   }
   else{
-    // apaga el LED
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin, LOW);  // apaga el LED
     Serial.println(" - LED apagado");
   }
   delay(500);
