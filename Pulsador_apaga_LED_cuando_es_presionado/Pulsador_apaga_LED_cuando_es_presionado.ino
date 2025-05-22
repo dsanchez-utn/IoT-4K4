@@ -4,7 +4,7 @@ bool encendido = true;
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Hola, 4K2!");
+  Serial.println("Hola, 4K4!");
   delay(1000);
   pinMode(PIN_PULSADOR, INPUT_PULLUP); // *
   pinMode(LED_BUILTIN, OUTPUT); 
